@@ -21,3 +21,4 @@
 - Pagination on tweets
 - User auth 
  
+ - Every tweet might be having a hashtag
