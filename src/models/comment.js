@@ -1,16 +1,17 @@
-const mongoose = require('mongoose');
-
-const commentSchema = new mongoose.Schema({
-    content :{
-        type : String,
-        required:true ,
-    },
-    userEmail :{
-        type : String
-    }
-     
-
-},{timestamps:true});
-
-const Comment = mongoose.model('Comment',commentSchema);
-module.exports = Comment;
+//const mongoose = require('mongoose');
+import mongoose from "mongoose";
+import mongoose from "mongoose";
+const hashtagSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true
+    }, 
+    tweets: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Tweet'
+        }
+    ]
+}, {timestamps: true});
+export default Hashtag;
+ 

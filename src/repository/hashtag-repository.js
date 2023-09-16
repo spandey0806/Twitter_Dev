@@ -44,5 +44,4 @@ class HashtagRepository {
         }
     }
 }
-
 export default HashtagRepository;
