@@ -1,4 +1,4 @@
-import LikeService from "../services/like-service";
+import LikeService from "../services/like-service.js";
 export const toggleLike = async (req,res)=>{
     try {
         const response = await LikeService.toggleLike(req.query.modelId, req.params.modelType , req.body.userId);
