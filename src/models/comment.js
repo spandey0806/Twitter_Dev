@@ -1,5 +1,5 @@
 //const mongoose = require('mongoose');
-import mongoose from "mongoose";
+ 
 import mongoose from "mongoose";
 const commentSchema = new mongoose.Schema({
     content :{
@@ -20,7 +20,15 @@ const commentSchema = new mongoose.Schema({
         type : mongoose.Schema.Types.ObjectId,
         required : true,
         refPath : 'onModel'
-    }
+    },
+    comments :[
+        {
+            Type : mongoose.Schema.Types.ObjectId,
+            ref  : 'Comment',
+        }
+    ]
+ 
 }, {timestamps: true});
-export default Hashtag;
+const Comment = mongoose.model('Comment', commentSchema);
+export default Comment;
  
